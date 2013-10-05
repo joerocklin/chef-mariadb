@@ -47,7 +47,7 @@ when "rhel", "fedora"
   default['mariadb']['root_group']              = "root"
   default['mariadb']['mariadbadmin_bin']        = "/usr/bin/mysqladmin"
   default['mariadb']['mariadb_bin']             = "/usr/bin/mysql"
-
+  default['mariadb']['version']                 = '5.5'
   default['mariadb']['conf_dir']                = '/etc'
   default['mariadb']['confd_dir']               = '/etc/mysql/conf.d'
   default['mariadb']['socket']                  = "/var/lib/mysql/mysql.sock"

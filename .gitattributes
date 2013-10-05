@@ -1,0 +1,5 @@
+# this makes the line ending setting portable with repo
+# instead of relying on client being configured properly
+# Windows derp.
+
+*   text eol=lf
