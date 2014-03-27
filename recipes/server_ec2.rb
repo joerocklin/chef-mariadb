@@ -29,8 +29,8 @@ if node.attribute?('ec2') && !FileTest.directory?(node['mariadb']['ec2_path'])
 
   [node['mariadb']['ec2_path'], node['mariadb']['data_dir']].each do |dir|
     directory dir do
-      owner 'mariadb'
-      group 'mariadb'
+      owner node['mariadb']['service']['user']
+      group node['mariadb']['service']['group']
     end
   end
 

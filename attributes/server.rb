@@ -23,6 +23,10 @@ default['mariadb']['bind_address']              = node.attribute?('cloud') ? nod
 default['mariadb']['port']                      = 3306
 default['mariadb']['nice']                      = 0
 
+# service/daemon user/group
+default['mariadb']['service']['user']                  = 'mysql'
+default['mariadb']['service']['group']                 = 'mysql'
+
 # eventually remove?  where is this used?
 if attribute?('ec2')
   default['mariadb']['ec2_path']    = '/mnt/mysql'
