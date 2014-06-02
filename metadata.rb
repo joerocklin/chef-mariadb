@@ -30,4 +30,4 @@ depends 'yum-epel'
 depends 'apt',              '~> 2.0'
 
 depends 'openssl',          '~> 1.1'
-depends 'build-essential',  '~> 1.4'
+depends 'build-essential',  '> 1.4'
