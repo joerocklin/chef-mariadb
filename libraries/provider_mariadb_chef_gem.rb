@@ -37,7 +37,7 @@ class Chef
       def action_remove
 
         recipe_eval do
-          %w(mariadb-client libmariadbclient-dev).each do |p|
+          node['mariadb']['client']['packages'].each do |p|
             package p do
               action :remove
             end
