@@ -20,15 +20,6 @@
 # limitations under the License.
 #
 
-node.set['build-essential']['compiletime'] = true
-include_recipe 'build-essential::default'
-include_recipe 'mariadb::client'
-
-node['mariadb']['client']['packages'].each do |name|
-  resources("package[#{name}]").run_action(:install)
+mariadb_chef_gem "default" do
+  action :install
 end
-
-chef_gem 'mysql2'
-
-# The database cookbook needs the mysql gem
-chef_gem 'mysql'
